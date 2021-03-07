@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "692280215235",
+    "project_id": "home-builder-f6f23",
+    "storage_bucket": "home-builder-f6f23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:692280215235:android:85d848b4081fd8bc848476",
+        "android_client_info": {
+          "package_name": "com.tss.homebuilder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "692280215235-mr17k0f3flpft3o4h1ph9e789ellfh7j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfttUa4FQ6PCZb_vxRn_a0lBbgCn-JtZY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "692280215235-mr17k0f3flpft3o4h1ph9e789ellfh7j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="2dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/title_maps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:text="title"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card_background"
+        app:cardElevation="5sp"
+        app:cardBackgroundColor="@color/primary_color"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imageView_mapid"
+                android:layout_width="match_parent"
+                android:layout_height="378dp"
+                android:layout_margin="5dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/maps" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

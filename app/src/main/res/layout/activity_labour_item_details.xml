@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Activities.LabourItemDetails">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical">
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:layout_width="80dp"
+              android:layout_height="80dp"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentTop="true"
+              android:layout_marginStart="26dp"
+              android:layout_marginTop="20dp"
+              android:src="@drawable/worker"
+              app:civ_border_color="@color/primary_color"
+              app:civ_border_width="1dp" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentEnd="true"
+              android:layout_marginTop="62dp"
+              android:layout_marginEnd="17dp"
+              android:fontFamily="@font/poppins_semibold"
+              android:text="Hourly Rate"
+              android:textColor="@color/black"
+              android:textSize="12sp" />
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentEnd="true"
+              android:layout_marginTop="88dp"
+              android:layout_marginEnd="38dp"
+              android:fontFamily="@font/poppins"
+              android:text="$30/hr"
+              android:textColor="@color/black"
+              android:textSize="12sp" />
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentTop="true"
+              android:layout_marginStart="114dp"
+              android:layout_marginTop="52dp"
+              android:fontFamily="@font/poppins_semibold"
+              android:text="Mr. Ali"
+              android:textColor="@color/black"
+              android:textSize="15sp" />
+      </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Employee Type:"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Civil Eng."
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/black"
+            android:textSize="10sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Description"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="2dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="Sometimes there just isn't enough room in the view window to display all the text. In this video I show you how to use a ScrollView. A ScrollView will enable the user to scroll down as far as they need on the screen."/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Contact Details"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="2dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/ic_baseline_email_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usman@gmail.com"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/ic_phone_number"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usman@gmail.com"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:background="@drawable/ic_baseline_perm_contact_calendar_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="usman@gmail.com"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Reviews Rattings"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="2dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rating_rv_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="1"
+            tools:listitem="@layout/ratingsitems" />
+    </LinearLayout>
+</ScrollView>
