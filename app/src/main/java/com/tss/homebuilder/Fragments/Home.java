@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
@@ -38,7 +39,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-
+import static com.tss.homebuilder.Constant.SLIDER;
 public class Home extends Fragment {
     View view;
     List< SliderItem > sliderItemList;
@@ -51,6 +52,7 @@ public class Home extends Fragment {
     WorkerAdapter workerAdapter;
     RecyclerView builderRecyclerView;
     RecyclerView workerRecyclerView;
+
     public Home() {
         // Required empty public constructor
     }
@@ -91,7 +93,7 @@ public class Home extends Fragment {
         mSliderView.setIndicatorUnselectedColor(Color.GRAY);
         mSliderView.setScrollTimeInSec(4);
         sliderItemList = new ArrayList<>();
-        StringRequest request = new StringRequest(Request.Method.GET, "http://technicaltea.e-sialkot.com/Admin/apis/sliderapis.php", new Response.Listener< String >() {
+        StringRequest request = new StringRequest(Request.Method.GET, SLIDER, new Response.Listener< String >() {
             @Override
             public void onResponse(String response) {
                 Log.d("testtcode", response);
@@ -123,7 +125,6 @@ public class Home extends Fragment {
     private void LoadBuilder() {
         builderItemsList = new ArrayList<>();
         for (int i = 1; i <= 10; i++) {
-            //(int bid, String bname, String bstartdate, String bWeburl, String baddress, String bPhone, String brating, int bNo_of_employee, String bImageUrl, int bVerifiyStatus)
             builderItemsList.add(new BuilderItems(1, "Constructo", "23-34-43", "www.google.com", "adress", "03419796197", "4.3", 6, "https://cdn1.vectorstock.com/i/thumb-large/66/85/building-construction-logo-vector-22656685.jpg", 9));
         }
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
@@ -133,16 +134,17 @@ public class Home extends Fragment {
         builderRecyclerView.setAdapter(builderAdapter);
         builderAdapter.notifyDataSetChanged();
     }
+
     private void LoadWorker() {
-     workerItemsList = new ArrayList<>();
+        workerItemsList = new ArrayList<>();
         for (int i = 1; i <= 10; i++) {
             //(int wId, String wName, String wtypeofemployee, String wAdress, String wRatings, String wAge, String wImageUrl, int whourlyrate)
-            workerItemsList.add(new WorkerItems(1,"Rocky","Painter","Daska Pakistan","ratings","33","https://cdn1.vectorstock.com/i/thumb-large/84/80/cityscape-building-logo-vector-16628480.jpg",20));
+            workerItemsList.add(new WorkerItems(1, "Rocky", "Painter", "Daska Pakistan", "ratings", "33", "https://cdn1.vectorstock.com/i/thumb-large/84/80/cityscape-building-logo-vector-16628480.jpg", 20));
         }
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         layoutManager.setOrientation(RecyclerView.HORIZONTAL);
         workerRecyclerView.setLayoutManager(layoutManager);
-        workerAdapter =  new WorkerAdapter(mContext, workerItemsList);
+        workerAdapter = new WorkerAdapter(mContext, workerItemsList);
         workerRecyclerView.setAdapter(workerAdapter);
         workerAdapter.notifyDataSetChanged();
     }

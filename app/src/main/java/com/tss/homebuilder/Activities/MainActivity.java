@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if(FirebaseAuth.getInstance().getCurrentUser() != null){
+      if(FirebaseAuth.getInstance().getCurrentUser() != null){
             handler = new Handler();
             handler.postDelayed(() -> {
                 intent = new Intent(MainActivity.this, Home_Activity.class);
                 startActivity(intent);
                 finish();
             }, SPLASH_TIME);
-        }
+      }
         //else if(firstTime){
             // Go to Intro Activity
     //    }

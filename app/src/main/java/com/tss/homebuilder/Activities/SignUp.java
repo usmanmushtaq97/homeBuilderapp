@@ -17,11 +17,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
 import com.tss.homebuilder.R;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-
+import static com.tss.homebuilder.Constant.REGISTER_USER;
 public class
 SignUp extends AppCompatActivity {
     Button mNext;
@@ -33,7 +29,7 @@ SignUp extends AppCompatActivity {
     String email;
     String mLastName;
     String password;
-    String mobileNumber="788878778";
+    String mobileNumber = "788878778";
     public static String userpref = "USER_PREF";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,12 +53,10 @@ SignUp extends AppCompatActivity {
         mEmailEt = findViewById(R.id.signuemail_id);
         mPasswordEt = findViewById(R.id.signup_password_id);
     }
-
     private void getIntentValue() {
         Intent intent = getIntent();
         intent.getStringExtra("mobilenumber");
     }
-
     private Boolean IsNotEmpty() {
         name = mFirstNameET.getText().toString();
         mLastName = mLastNameET.getText().toString();
@@ -83,7 +77,6 @@ SignUp extends AppCompatActivity {
         }
         return true;
     }
-
     private void SavedValueInSharedPref() {
         SharedPreferences prefs = getApplicationContext().getSharedPreferences(userpref, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
@@ -97,17 +90,17 @@ SignUp extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Loading...");
         progressDialog.show();
-        StringRequest request = new StringRequest(Request.Method.GET, "http://technicaltea.e-sialkot.com/Admin/apis/registeruser.php?fname=" + name + "&lname=" + mLastName + "&email=" + email + "&mobile=" + mobileNumber + "&pas=" + password
+        StringRequest request = new StringRequest(Request.Method.GET, REGISTER_USER + "?fname=" + name + "&lname=" + mLastName + "&email=" + email + "&mobile=" + mobileNumber + "&pas=" + password
                 , response -> {
-                 if(response.contentEquals("successfully inserted")){
-                     progressDialog.dismiss();
-                     Intent intent = new Intent(SignUp.this, Home_Activity.class);
-                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                     startActivity(intent);
-                     Toast.makeText(this, "sucessfully inserted", Toast.LENGTH_SHORT).show();
-                 }
-
-                }, error -> Toast.makeText(this, "errorrr", Toast.LENGTH_SHORT).show());
+            Log.d("rs", response);
+            if (response.contentEquals("successfully inserted")) {
+                progressDialog.dismiss();
+                Intent intent = new Intent(SignUp.this, Home_Activity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                Toast.makeText(this, "sucessfully inserted", Toast.LENGTH_SHORT).show();
+            }
+        }, error -> Toast.makeText(this, "errorrr", Toast.LENGTH_SHORT).show());
         request.setRetryPolicy(new DefaultRetryPolicy(
                 7000,
                 DefaultRetryPolicy.DEFAULT_MAX_RETRIES,

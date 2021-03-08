@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.tss.homebuilder.Activities.BuiderItemDetails;
+import com.tss.homebuilder.Activities.BuilderDetails;
 import com.tss.homebuilder.Models.BuilderItems;
 import com.tss.homebuilder.R;
 
@@ -58,7 +59,7 @@ public class BuilderAdapter extends RecyclerView.Adapter< BuilderAdapter.ViewHol
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, BuiderItemDetails.class);
+                Intent intent = new Intent(mContext, BuilderDetails.class);
 //                intent.putExtra("pid", builderItems.getId());
 //                intent.putExtra("name", builderItems.getTitle());
 //                intent.putExtra("descriptions", builderItems.getDescriptions());

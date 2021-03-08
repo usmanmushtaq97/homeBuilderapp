@@ -9,9 +9,9 @@ tools:context=".Fragments.HouseMaps">
 <androidx.appcompat.widget.Toolbar
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:title="ali"
+    app:title="@string/app_name"
     app:titleTextColor="@color/white"
-    android:background="@color/black"/>
+    android:background="@color/primary_color"/>
 <com.google.android.material.tabs.TabLayout
     android:id="@+id/tab_layout_id"
     android:layout_width="match_parent"
